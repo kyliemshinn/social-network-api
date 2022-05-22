@@ -1,21 +1,18 @@
-
-    //  api/user
-    
-    //GET all users
+//  api/user
 
 
-    //GET a single user by ID
+//will need to require routes
 
 
-    //POST a new user
+//GET all users
+//POST a new user
+router.route("/").get(getUsers).post(createUser);
 
+//GET a single user by ID
+router.route("/:id").get(getUserById).put(updateUser).delete(deleteUser);
 
+// POST to add a new friend to user friend list
+//DELETE to remove friend
+router.route("/:id/friends/:friendsId").post(addFriend).delete(removeFriend);
 
-    
-
-
-    //BONUS
-
-    // POST to add a new friend to user friend list
-
-    //DELETE to remove friend
+module.exports = router;
