@@ -1,7 +1,7 @@
 //require User model
 const { User } = require("../models");
 
-module.exports = {
+const userControllers = {
   //get all users
   getUsers(req, res) {
     User.find({})
@@ -97,3 +97,5 @@ module.exports = {
       .catch((err) => res.status(400).json(err));
   },
 };
+
+module.exports = userControllers;
