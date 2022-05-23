@@ -14,8 +14,8 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
 
-   //create new user
-   createUser(req, res) {
+  //create new user
+  createUser(req, res) {
     User.create(req.body)
       .then((userData) => res.json(userData))
       .catch((err) => res.status(400).json(err));
@@ -39,26 +39,27 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
 
-    // update user by ID
-    updateUser(req, res) {
-        User.findOneAndUpdate(
-          { _id: req.params.userId },
-          { $set: req.body },
-          { runValidators: true, new: true }
-        )
-          .then((userData) =>
-            !userData? res.status(404).json({ message: "No user found." }): res.json(user)
-          )
-          .catch((err) => res.status(500).json(err));
-      },
+  // update user by ID
+  updateUser(req, res) {
+    User.findOneAndUpdate(
+      { _id: req.params.userId },
+      { $set: req.body },
+      { runValidators: true, new: true }
+    )
+      .then((userData) =>
+        !userData
+          ? res.status(404).json({ message: "No user found." })
+          : res.json(user)
+      )
+      .catch((err) => res.status(500).json(err));
+  },
 
   // delete user by ID
   deleteUser(req, res) {
     User.findOneAndDelete({ _id: req.params.id })
       .then((userData) => {
         if (!userData) {
-          res
-            .status(404).json({ message: "No user found." });
+          res.status(404).json({ message: "No user found." });
           return;
         }
         res.json(userData);
@@ -66,7 +67,7 @@ module.exports = {
       .catch((err) => res.status(400).json(err));
   },
 
-/*ADD AND DELETE FRIENDS*/
+  /*ADD AND DELETE FRIENDS*/
 
   // add a friend
   addFriend(req, res) {
