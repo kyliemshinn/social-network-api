@@ -1,8 +1,15 @@
+const router = require("express").Router();
+
+const {
+  getUsers,
+  getUserById,
+  createUser,
+  updateUser,
+  deleteUser,
+  addFriend,
+  removeFriend,
+} = require("../../controllers/userController");
 //  api/user
-
-
-//will need to require routes
-
 
 //GET all users
 //POST a new user
