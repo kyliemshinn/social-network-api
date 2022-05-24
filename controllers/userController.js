@@ -42,16 +42,17 @@ const userControllers = {
   // update user by ID
   updateUser(req, res) {
     User.findOneAndUpdate(
-      { _id: req.params.userId },
-      { $set: req.body },
-      { runValidators: true, new: true }
-    )
-      .then((userData) =>
-        !userData
-          ? res.status(404).json({ message: "No user found." })
-          : res.json(user)
-      )
-      .catch((err) => res.status(500).json(err));
+      { _id: req.params.id }, 
+      req.body, 
+      {new: true, runValidators: true,})
+      .then((userData) => {
+        if (!userData) {
+          res.status(404).json({ message: "No user found by ID." });
+          return;
+        }
+        res.json(dbUserData);
+      })
+      .catch((err) => res.status(400).json(err));
   },
 
   // delete user by ID

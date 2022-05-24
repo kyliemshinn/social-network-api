@@ -42,7 +42,7 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 
 ## **Usage**
 
-add walkthrough video here
+For full usage of the Social Network API, please reference the [video tutorial]().
 
 
 
