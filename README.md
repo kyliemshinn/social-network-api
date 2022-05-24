@@ -1,7 +1,7 @@
 # social-network-api
 
-![jsBadge](https://img.shields.io/github/languages/top/kyliemshinn/social-network-api?style=plastic)
-![languages](https://img.shields.io/github/languages/count/kyliemshinnn/social-network-api)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![GitHub language count](https://img.shields.io/github/languages/count/kyliemshinn/social-network-api)
 ![License](https://img.shields.io/github/license/kyliemshinn/social-network-api)
 
 
