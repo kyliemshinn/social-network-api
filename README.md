@@ -55,7 +55,7 @@ For full usage of the Social Network API, please reference the [video tutorial](
 * Node.js
 * Mongoose
 * Express.js
-* Mongoose
+* Mongodb
 
 
 ## **Author**
